@@ -116,3 +116,28 @@ nav {
 textarea {
 	min-height: 250px;
 }
+
+.navbar-default {
+	padding-top: 1.5em;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+	#pins .box {
+    margin: 10px;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 7px;
+    text-align: center;
+}
+
+#pins {
+    margin: 0 auto;
+    width: 100% !important;
+  }
+}
