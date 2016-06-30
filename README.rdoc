@@ -1,28 +1,44 @@
-== README
+= PINTEREST CLONE BY GIOVANI CAMARA
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple pinterest clone I made for my Girlfriend Stephanie. She loves Pinterest and I figured why not make a custom Pinterst for her! It's always fun to make projects... but making projects for others is 10 times Better!
 
-Things you may want to cover:
+Abilities of this app:
 
-* Ruby version
+* It has basic CRUD abilities for PINS
 
-* System dependencies
+* Users can log in and post custom pins
 
-* Configuration
+* Users can Upvote Pins
 
-* Database creation
+* This app incorporates Bootstrap
 
-* Database initialization
+== Special Gems:
 
-* How to run the test suite
+* Devise
 
-* Services (job queues, cache servers, search engines, etc.)
+* Paperclip
+
+* SimpleForm
+
+* Haml
+
+* Acts_As_Votable
 
 * Deployment instructions
 
-* ...
+== Always Being Forward Thinking ...
+
+* Maybe I can incorporate a comment field. Coding it from scratch or using disqus
+
+* Allow Users to add Profile Pictures
+
+* Changing framework to Materialize Framework (for more of an app feel)
+
+== To contact me
+
+* Email: Gcamara14@gmail.com
+
+* Website: GiovaniCamara.com
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
