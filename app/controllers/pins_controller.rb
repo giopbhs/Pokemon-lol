@@ -1,6 +1,8 @@
 class PinsController < ApplicationController
 	before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote]
 	before_action :authenticate_user!, except: [:index, :show]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
+	#Requires user except for pins listing and pins show action
 	def index
 		@pins = Pin.all.order("created_at DESC")
 	end
@@ -55,5 +57,12 @@ class PinsController < ApplicationController
 		@pin = Pin.find(params[:id])
 	end
 	#This finds the id of a pin
+
+	def require_same_user
+		if current_user != @pin.user
+			flash[:danger] = "You can only Edit or Delete your own Pins!"
+			redirect_to root_path
+		end
+	end
 
 end
