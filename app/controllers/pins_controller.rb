@@ -15,7 +15,7 @@ class PinsController < ApplicationController
 		@pin = current_user.pins.build(pin_params)
 
 		if @pin.save
-			redirect_to @pin, notice: "Succesfully Created new Pin"
+			redirect_to @pin, notice: "Succesfully Created new Post"
 		else
 			render 'new'
 		end
@@ -31,7 +31,7 @@ class PinsController < ApplicationController
 
 	def update
 		if @pin.update(pin_params)
-			redirect_to @pin, notice: "Pin was Succesfully updated!"
+			redirect_to @pin, notice: "Post was Succesfully updated!"
 		else
 			render 'edit'
 		end
@@ -60,7 +60,7 @@ class PinsController < ApplicationController
 
 	def require_same_user
 		if current_user != @pin.user
-			flash[:danger] = "You can only Edit or Delete your own Pins!"
+			flash[:danger] = "You can only Edit or Delete your own Post!"
 			redirect_to root_path
 		end
 	end

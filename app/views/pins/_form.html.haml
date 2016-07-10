@@ -4,7 +4,7 @@
 			%h2
 			=pluralize(@pin.errors.count, "error")
 			-# pluralizes will add an "s" to error if more than one
-			prevented this Pin from saving
+			prevented this Post from saving
 			%ul
 				- @pin.errors.full_messages.each do |msg|
 					%li=msg
@@ -16,4 +16,4 @@
 	.form-group
 		= f.input :description,  input_html: { class: 'form-control'}
 	
-	= f.button :submit, class: "btn btn-primary"
+	= f.button :submit, value: "Create Post", class: "btn btn-primary"
