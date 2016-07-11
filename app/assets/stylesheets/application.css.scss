@@ -149,3 +149,35 @@ border-bottom: 1px rgb(158, 158, 158) solid;
 #list_index{
 	width:80%;
 }
+
+
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+	#list_index {
+    		width: 100%;
+	}
+	#show_icons{
+    float: none !important;
+  
+}
+	.center-mobile{
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	}
+    
+	/* end of query */
+
+	@media only screen and (min-width : 769px) {
+
+	.center-desktop{
+		
+		padding-top: 0px;
+		padding-bottom: 5px;
+	}
+
+	}
+
+	/* end of query */
