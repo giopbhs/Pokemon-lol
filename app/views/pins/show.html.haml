@@ -8,13 +8,13 @@
 				%p= @pin.description
 				%p
 				submitted by:
-				= @pin.user.email
+				= @pin.user.name
 			.panel-footer
 				.row
 					.col-md-6
 						%p.user
 						Submitted by
-						= @pin.user.email
+						= @pin.user.name
 					.col-md-6
 						.btn-group.pull-right
 							= link_to like_pin_path(@pin), method: :put, class: "btn btn-default" do
