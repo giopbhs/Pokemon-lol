@@ -23,7 +23,6 @@
 					%ul.nav.navbar-nav.navbar-left
 						%li= link_to "All Posts", pins_path
 						%li= link_to "All Links", links_path
-
 					%ul.nav.navbar-nav.navbar-right
 						%li.dropdown
 							%a.dropdown-toggle{:href => "#", "role" => "button", "data-toggle" => "dropdown", "data-target" => "#"}
@@ -36,11 +35,9 @@
 						%li= link_to "Sign Out", destroy_user_session_path, method: :delete
 				- else
 					%ul.nav.navbar-nav.navbar-left
-						%li= link_to "All Posts"
-						%li= link_to "All Links"
+						%li= link_to "All Post", pins_path
+						%li= link_to "All Links", links_path
 					%ul.nav.navbar-nav.navbar-right
-						%li= link_to "Pokemon Links", links_path
-						%li= link_to "Pokemon Post"
 						%li= link_to "Sign Up", new_user_registration_path
 						%li= link_to "Sign in", new_user_session_path
 	.container		
