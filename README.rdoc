@@ -1,14 +1,14 @@
-= PINTEREST CLONE BY GIOVANI CAMARA
+= POKEMON LOL BY GIOVANI CAMARA
 
-This is a simple pinterest clone I made for my Girlfriend Stephanie. She loves Pinterest and I figured why not make a custom Pinterst for her! It's always fun to make projects... but making projects for others is 10 times Better!
+This is a pokemon GO inspired app. Currently pokemon GO is all the rage. I figured, why not test my skills and build something that will get users talking about pokemon!
 
 Abilities of this app:
 
-* It has basic CRUD abilities for PINS
+* It has basic CRUD abilities for Image Post & Link post
 
-* Users can log in and post custom pins
+* Users can log in and post custom Image Post & Link Post
 
-* Users can Upvote Pins
+* Users can Upvote Post & Downvote post
 
 * This app incorporates Bootstrap
 
@@ -28,11 +28,13 @@ Abilities of this app:
 
 == Always Being Forward Thinking ...
 
-* Maybe I can incorporate a comment field. Coding it from scratch or using disqus
+* Maybe I can add omniauth with twitter or facebook
 
 * Allow Users to add Profile Pictures
 
 * Changing framework to Materialize Framework (for more of an app feel)
+
+* Allow users to comment and recieve notifications
 
 == To contact me
 

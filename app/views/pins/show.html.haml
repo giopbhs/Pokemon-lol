@@ -26,3 +26,24 @@
 							-if user_signed_in? && current_user == @pin.user
 								= link_to "Edit", edit_pin_path, class: "btn btn-default"
 								= link_to "Delete", pin_path, method: :delete, data: {confirm: "Whoa!! Are you sure?"}, class: "btn btn-default"
+				.row
+					.col-md-12
+						%br
+						%br
+						%h3.comments_title
+							=@pin.coments.count 
+							Comments
+						%div#coment
+							= render :partial => @pin.coments.reverse
+
+						= simple_form_for [@pin, Coment.new]  do |f|
+							.field
+								= f.text_area :body, class: "form-control", id: "comment-textfield"
+								%br/
+								= f.submit "Add Comment", class: "btn btn-primary"
+
+
+
+
+
+					

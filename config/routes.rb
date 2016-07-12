@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :coments
   resources :comments
   resources :links do
   	member do
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   		put "like", to: "pins#upvote"
   		put "dislike", to: "pins#downvote"
   	end
-    resources :comments
+    resources :coments
   end
 
   root "pins#index"
