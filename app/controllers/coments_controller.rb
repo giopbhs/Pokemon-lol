@@ -1,6 +1,9 @@
 class ComentsController < ApplicationController
   before_action :set_coment, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @coments = Coment.all
+  end
 
   def create
     @pin = Pin.find(params[:pin_id])
@@ -24,7 +27,7 @@ class ComentsController < ApplicationController
   def destroy
     @coment.destroy
     respond_to do |format|
-      format.html { redirect_to coments_url, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
