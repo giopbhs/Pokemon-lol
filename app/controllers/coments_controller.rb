@@ -1,5 +1,7 @@
 class ComentsController < ApplicationController
   before_action :set_coment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def index
     @coments = Coment.all
@@ -21,6 +23,9 @@ class ComentsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
 
   # DELETE /coments/1
   # DELETE /coments/1.json
@@ -42,4 +47,13 @@ class ComentsController < ApplicationController
     def coment_params
       params.require(:coment).permit(:pin_id, :body, :user_id)
     end
+
+
+  def require_same_user
+    if current_user != @coment.user
+      flash[:danger] = "You can only Edit or Delete your own Post!"
+      redirect_to root_path
+    end
+  end
+
 end

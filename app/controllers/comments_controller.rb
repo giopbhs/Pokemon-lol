@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
   def index
     @comments = Comment.all
   end
@@ -19,6 +20,11 @@ class CommentsController < ApplicationController
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+
+  def edit
+    
   end
 
 
@@ -42,4 +48,13 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:link_id, :body, :user_id)
     end
+
+
+  def require_same_user
+    if current_user != @comment.user
+      flash[:danger] = "You can only Edit or Delete your own Post!"
+      redirect_to root_path
+    end
+  end
+
 end
