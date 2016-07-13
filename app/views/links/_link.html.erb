@@ -1,0 +1,13 @@
+<% obj.each do |link| %>
+  <div class="link">
+    <h4 class="text-center">
+      <%= link_to link.title, link %><br>
+      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
+    </h4>
+
+      <p class="text-center"><a class="btn btn-default btn-sm" href="<%= link.url %>" target="_blank">Visit Link</a></p>
+
+
+  </div>
+      <hr class="link_hr"/>
+  <% end %>

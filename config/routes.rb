@@ -21,4 +21,8 @@ Rails.application.routes.draw do
 
   root "pins#index"
 
+  #Users show route
+
+  resources :users, only: [:show, :index]
+
 end

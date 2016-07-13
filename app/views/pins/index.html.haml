@@ -6,4 +6,4 @@
 				%h2= link_to pin.title, pin 
 				%p.user
 				Submitted by
-				= pin.user.name
+				= link_to pin.user.name, users_path(@user)

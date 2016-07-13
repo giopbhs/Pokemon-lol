@@ -1,0 +1,49 @@
+<div class="well">
+<% if user_signed_in? && current_user == @user %>
+<div class="text-center">
+<%= link_to 'Click Here to Change Profile Picture', '#collapseOne', role: :button,
+          data: { parent: '#accordion', toggle: :collapse },
+          aria: { controls: :collapseOne, expanded: "false" } %>
+
+
+<div id="collapseOne" class="panel-collapse collapse out text-center" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <p>To Change Your Profile Picture, pleave visit <a href="http://gravatar.com" target="_blank">gravatar.com </a> and change your profile picture on that site.</p>
+        <p class="text-center"><a class="btn btn-default btn-sm" href="http://gravatar.com" target="_blank">Visit Link</a></p>
+      </div>
+    </div>
+</div>
+ <% end %>
+
+<h1 class="text-center">Hello, <br/> My Name is <br/> <%= @user.name %> </h1>
+
+
+
+<div class="row">
+
+	<div class="col-md-12 center text-center">
+		
+		<%= gravatar_for @user, size: 150 %>
+	</div>
+
+</div>
+
+
+<h2 class="text-center">All post Made By <%= @user.name %></h2>
+<div class="row">
+<div class="col-xs-6"> 
+<p class="text-center"> Image Post </p>
+<br/>
+	<%= render 'pins/pins', obj: @user.pins %> </div>
+
+<div class="col-xs-6">
+<p class="text-center"> Link Post </p>
+<br/>
+ <%= render 'links/link', obj: @user.links %> </div>
+</div>
+</div>
+<!--end of well -->
+
+
+
+

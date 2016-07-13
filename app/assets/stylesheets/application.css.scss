@@ -132,7 +132,7 @@ textarea {
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
 	#pins .box {
-    margin: 10px;
+    margin: 2px;
     width: 100%;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
     border-radius: 7px;
@@ -162,10 +162,13 @@ border-bottom: 1px rgb(158, 158, 158) solid;
     		width: 100%;
     		background-color: rgba(248, 248, 248, 0.99);
 	}
+
 	#show_icons{
     float: none !important;
   
 }
+
+
 	.center-mobile{
 		text-align: center;
 		padding-top: 10px;
@@ -198,4 +201,28 @@ border-bottom: 1px rgb(158, 158, 158) solid;
 
 #new_comment{
 	    margin-bottom: 25px;
+}
+
+.background-transparent{
+	background-color: rgba(45, 59, 46, 0.14);
+
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../assets/glyphicons-halflings-regular.eot');
+  src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/glyphicons-halflings-regular.woff') format('woff'),
+  url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+a {
+    color: #333333;
+    
+    }
+
+    a:hover, a:focus {
+    color: #252525;
+    text-decoration: underline;
 }
