@@ -149,10 +149,15 @@ textarea {
 border-bottom: 1px rgb(158, 158, 158) solid;
 }
 
+#users_links{
+	width:50%;
+}
+
 #list_index{
 	width:80%;
 	background-color: rgba(248, 248, 248, 0.99);
 }
+
 
 
 
@@ -225,4 +230,12 @@ a {
     a:hover, a:focus {
     color: #252525;
     text-decoration: underline;
+}
+
+@media only screen and (min-width : 488px) and (max-width : 700px) {
+.user_pins #pins .box {
+    margin: 10px;
+   width:80%;
+
+}
 }
