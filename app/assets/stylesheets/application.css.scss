@@ -250,12 +250,18 @@ border-bottom: 1px rgb(158, 158, 158) solid;
 
 a {
     color: #333333;
+
+    -moz-text-decoration-color: #375b9d;
+    text-decoration-color: #375b9d;
     
     }
 
     a:hover, a:focus {
     color: #252525;
     text-decoration: underline;
+    -moz-text-decoration-color: #375b9d;
+    text-decoration-color: #375b9d;
+
 }
 
 @media only screen and (min-width : 488px) and (max-width : 700px) {
@@ -292,8 +298,7 @@ nav.share {
 }
 
 .border-box{
-	    border: 1px solid rgba(112, 112, 112, 0.2);
-
+border: 1px solid rgba(112, 112, 112, 0.02);
 }
 
 .btn-success:hover {
