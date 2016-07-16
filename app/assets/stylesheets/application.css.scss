@@ -29,8 +29,9 @@
 
 body {
     background: #E9E9E9;
-    background-image: image-url("pokemonlolbackground.png")
-
+    background-image: image-url("pokemonlolbackground.png");
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -194,6 +195,10 @@ border-bottom: 1px rgb(158, 158, 158) solid;
   
 }
 
+	.mobile-pad{
+    padding-top: 14px;
+    padding-bottom: 10px;
+}
 
 	.center-mobile{
 		text-align: center;
@@ -278,4 +283,15 @@ a {
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+}
+
+nav.share {
+    box-shadow: none;
+    margin-top:8px;
+    margin-bottom: 8px;
+}
+
+.border-box{
+	    border: 1px solid rgba(112, 112, 112, 0.2);
+
 }

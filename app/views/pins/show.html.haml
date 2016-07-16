@@ -11,11 +11,12 @@
 				= @pin.user.name
 			.panel-footer
 				.row
-					.col-md-6
+					.col-md-6.center-mobile.border-box
 						%p.user
-						Submitted by
+						Share this Post By
 						= @pin.user.name
-					.col-md-6
+						= render_shareable :buttons=> ['twitter', 'pinterest', 'linkedin']
+					.col-md-6.mobile-pad
 						.btn-group.pull-right
 							= link_to like_pin_path(@pin), method: :put, class: "btn btn-default" do
 								%span.glyphicon.glyphicon-thumbs-up.hvr-bob
