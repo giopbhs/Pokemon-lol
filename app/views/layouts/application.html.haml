@@ -40,6 +40,7 @@
 								Profile
 								%b.caret
 							%ul.dropdown-menu{"role" => "menu"}
+								%li.user_hi.text-center  #{current_user.name}
 								%li= link_to "Your Profile", current_user
 								%li= link_to "Edit Your Account", edit_user_registration_path(current_user)
 						%li.hvr-underline-from-center= link_to "Sign Out", destroy_user_session_path, method: :delete						
