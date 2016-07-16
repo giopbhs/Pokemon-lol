@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="well">
 <p>
   <strong>Pin:</strong>
   <%= @coment.pin_id %>
@@ -12,8 +12,11 @@
 
 <p>
   <strong>User:</strong>
-  <%= @coment.user %>
+  <%= @coment.user.name %>
 </p>
+<% if user_signed_in? && current_user == @coment.user %>
 
 <%= link_to 'Edit', edit_coment_path(@coment) %> |
+<% end %>
 <%= link_to 'Back', coments_path %>
+</div>

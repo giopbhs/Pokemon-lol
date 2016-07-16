@@ -295,3 +295,49 @@ nav.share {
 	    border: 1px solid rgba(112, 112, 112, 0.2);
 
 }
+
+.btn-success:hover {
+    color: #fff !important;
+    background-color: #d56250;
+    border-color: #fcca09;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #fcca09;
+    border-color: #4f698a;
+}
+
+.btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus, .open > .btn-success.dropdown-toggle:hover, .open > .btn-success.dropdown-toggle:focus, .open > .btn-success.dropdown-toggle.focus {
+    color: #fff;
+    background-color: #e36157;
+    border-color: #375b9d;
+}
+
+.line_none{
+	text-decoration:none;
+}
+
+.hvr-bounce-to-right:before {
+
+    background: #e05045;
+  
+}
+
+.hvr-underline-from-center:before {
+   
+    background: #375b9d;
+
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #375b9d;
+    border-color: #375b9d;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #4b6ba6;
+    border-color: #4b6ba6;
+}
