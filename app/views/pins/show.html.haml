@@ -1,4 +1,4 @@
-#pin_show.row
+#pin_show.row.animated.zoomIn
 	.col-md-8.col-md-offset-2
 		.panel.panel-default
 			.panel-heading.pin_image
@@ -18,10 +18,10 @@
 					.col-md-6
 						.btn-group.pull-right
 							= link_to like_pin_path(@pin), method: :put, class: "btn btn-default" do
-								%span.glyphicon.glyphicon-thumbs-up
+								%span.glyphicon.glyphicon-thumbs-up.hvr-bob
 								= @pin.get_upvotes.size
 							= link_to dislike_pin_path(@pin), method: :put, class: "btn btn-default" do
-								%span.glyphicon.glyphicon-thumbs-down
+								%span.glyphicon.glyphicon-thumbs-down.hvr-hang
 								= @pin.get_downvotes.size								
 							-if user_signed_in? && current_user == @pin.user
 								= link_to "Edit", edit_pin_path, class: "btn btn-default"

@@ -19,6 +19,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.pixelate{
+	font-family: 'Press Start 2P', cursive;    margin: 0;
+	  color: white;
+ text-shadow: -5px -1px 0 #375b9d, 1px -1px 0 #375b9d, -1px 1px 0 #375b9d, 1px 1px 0 #375b9d;
+}
+
+
+
 body {
     background: #E9E9E9;
     background-image: image-url("pokemonlolbackground.png")
@@ -30,11 +38,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
 
+#pins .box {
+
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
 nav {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	.navbar-brand {
 		a {
-			color: #BD1E23;
+			color: #fcca09;
 			font-weight: bold;
 			&:hover {
 				text-decoration: none;
@@ -46,12 +61,15 @@ nav {
 #pins {
   margin: 0 auto;
   width: 100%;
+
   .box {
 	  margin: 10px;
 	  width: 350px;
 	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	  border-radius: 7px;
 	  text-align: center;
+	  transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	  img {
 	  	max-width: 100%;
 	  	height: auto;
@@ -137,11 +155,14 @@ textarea {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
     border-radius: 7px;
     text-align: center;
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #pins {
     margin: 0 auto;
     width: 100% !important;
+
   }
 }
 
@@ -236,6 +257,25 @@ a {
 .user_pins #pins .box {
     margin: 10px;
    width:80%;
+   transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
 }

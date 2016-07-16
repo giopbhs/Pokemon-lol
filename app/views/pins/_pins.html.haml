@@ -1,7 +1,7 @@
 .user_pins
 	#pins.transitions-enabled
 		- obj.each do |pin|
-			.box.panel.panel-default
+			.box.panel.panel-default.hvr-buzz-out
 				= link_to (image_tag pin.image.url), pin
 				.panel-body
 					%h2= link_to pin.title, pin 
