@@ -56,3 +56,18 @@
 		- flash.each do |name, msg|
 			= content_tag :div, msg, class: "alert alert-info"
 		= yield
+	%footer.footer
+		.container
+			.row
+				.col-md-5
+					#footer_logo.navbar-brand.pixelate.hvr-wobble-skew= link_to "Pokemon LOL", root_path
+				.col-md-7
+					%ul.nav.navbar-nav.navbar-right
+						%li.hvr-pop= link_to "All Post", pins_path
+						%li.hvr-pop= link_to "All Links", links_path
+						%li.hvr-pop= link_to "All Users", users_path
+
+
+
+
+
