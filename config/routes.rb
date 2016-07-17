@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'pages/about'
+
+  get 'pages/credits'
+
+  get 'pages/resources'
+
   resources :coments
   resources :comments
   resources :links do
