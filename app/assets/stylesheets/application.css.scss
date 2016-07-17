@@ -379,6 +379,9 @@ border: 1px solid rgba(112, 112, 112, 0.02);
 #links {
   margin: 0 auto;
   width: 100%;
+  .panel{
+  	background-color: rgba(248,248,248,0.99)
+  }
   .box {
 	  margin: 10px;
 	  width: 238px;
