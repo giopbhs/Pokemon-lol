@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	%title Pokemon LOL
 	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	<link rel="stylesheet" href="animate.min.css">
 	<link href="hover-min.css" rel="stylesheet" media="all">
 	= stylesheet_link_tag    'application', media: 'all'
@@ -59,15 +60,16 @@
 		%br
 		%br
 		%br	
-	%footer.footer.navbar-fixed-bottom
+	%footer.footer.navbar-bottom
 		.container
 			.row
-				.col-md-5
-					#footer_logo.navbar-brand.pixelate.hvr-wobble-skew= link_to "Pokemon LOL", root_path
-				.col-md-7
+				.col-md-5.col-xs-6
+					#footer_logo.navbar-brand.text-center.pixelate.hvr-wobble-skew.hide-desktop= link_to "Pokemon LOL", root_path
+					.clearboth
+				.col-md-7.col-xs-6
 					%ul.nav.navbar-nav.navbar-right
-						%li.hvr-pop= link_to "About", pages_about_path
-						%li.hvr-pop= link_to "Credits", pages_credits_path
+						%li.hvr-pop.text-center= link_to "About", pages_about_path
+						%li.hvr-pop.text-center= link_to "Credits", pages_credits_path
 
 
 

@@ -190,9 +190,13 @@ border-bottom: 1px rgb(158, 158, 158) solid;
 	#list_index {
     		width: 100%;
     		background-color: rgba(248, 248, 248, 0.99);
+
 	}
 
 	.footer{
+	background-color:#f8f8f8;
+	}
+	.footer-hide{
 	display:none;
 	}
 
@@ -221,6 +225,14 @@ border-bottom: 1px rgb(158, 158, 158) solid;
 		
 		padding-top: 0px;
 		padding-bottom: 5px;
+	}
+
+	.hide-desktop{
+	display:none;
+	}
+
+	.footer{
+	background-color: transparent;
 	}
 
 	}
@@ -358,9 +370,7 @@ border: 1px solid rgba(112, 112, 112, 0.02);
 	text-transform: uppercase;
 }
 
-footer{
-	background-color: #f8f8f8;
-}
+
 
 #footer_logo a{
 	    color: #fcca09;
