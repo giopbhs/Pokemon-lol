@@ -1,0 +1,22 @@
+.container
+  #links.transitions-enabled.container
+    - @links.each do |link|
+      .box.panel.panel-default.hvr-buzz-out
+        .panel-body.link
+          %h2.title_case 
+            = link_to link.title, link
+            %span.glyphicon.glyphicon-search.icon_small.hvr-pop{"aria-hidden" => "true"}
+
+            %br/
+            %small.author
+              Submitted #{time_ago_in_words(link.created_at)} ago by #{link.user.name}
+          
+          %hr
+          .btn-group
+            %a.btn.btn-default.btn-sm.hvr-pop{:href => link.url, :target => "_blank"} Visit Link
+            = link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do
+              %span.glyphicon.glyphicon-thumbs-up
+              = link.get_upvotes.size
+            = link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do
+              %span.glyphicon.glyphicon-thumbs-down
+                = link.get_downvotes.size
