@@ -4,7 +4,7 @@ class PinsController < ApplicationController
 	before_action :require_same_user, only: [:edit, :update, :destroy]
 	#Requires user except for pins listing and pins show action
 	def index
-		@pins = Pin.all.order("created_at DESC")
+		@pins = Pin.all.order(:cached_weighted_score => :desc)
 	end
 
 	def show
@@ -45,7 +45,7 @@ class PinsController < ApplicationController
 	def upvote
 
     @pin = Pin.find(params[:id])
-    @pin.upvote_by current_user
+    @pin.upvote_by current_user, :vote_weight => 3
     
     redirect_to :back
   	end
