@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -466,4 +467,18 @@ border: 1px solid rgba(112, 112, 112, 0.02);
 
 .pikapee{
 	width: 50%;
+}
+body::selection,p::selection,h1::selection,h2::selection,h3::selection {
+    background-color: #fcca09;
+    color: #375b9d;
+}
+
+div::selection,a::selection,img::selection, small::selection, .btn::selection {
+    background-color: #fcca09;
+    color: #375b9d;
+}
+
+.navbar-brand a::selection {
+	background-color:#f8f8f8;
+    text-shadow: -5px -1px 0 #fcca09, 1px -1px 0 #fcca09, -1px 1px 0 #fcca09, 1px 1px 0 #fcca08;
 }
