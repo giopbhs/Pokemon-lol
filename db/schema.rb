@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160721061631) do
+ActiveRecord::Schema.define(version: 20160721064959) do
 
   create_table "coments", force: :cascade do |t|
     t.integer  "pin_id"
@@ -113,12 +113,26 @@ ActiveRecord::Schema.define(version: 20160721061631) do
     t.string   "duration"
     t.integer  "likes"
     t.integer  "dislikes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.string   "uid"
     t.integer  "user_id"
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.integer  "cached_weighted_score",   default: 0
+    t.integer  "cached_weighted_total",   default: 0
+    t.float    "cached_weighted_average", default: 0.0
   end
 
+  add_index "videos", ["cached_votes_down"], name: "index_videos_on_cached_votes_down"
+  add_index "videos", ["cached_votes_score"], name: "index_videos_on_cached_votes_score"
+  add_index "videos", ["cached_votes_total"], name: "index_videos_on_cached_votes_total"
+  add_index "videos", ["cached_votes_up"], name: "index_videos_on_cached_votes_up"
+  add_index "videos", ["cached_weighted_average"], name: "index_videos_on_cached_weighted_average"
+  add_index "videos", ["cached_weighted_score"], name: "index_videos_on_cached_weighted_score"
+  add_index "videos", ["cached_weighted_total"], name: "index_videos_on_cached_weighted_total"
   add_index "videos", ["user_id"], name: "index_videos_on_user_id"
 
   create_table "votes", force: :cascade do |t|
