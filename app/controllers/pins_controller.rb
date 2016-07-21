@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-	before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote]
+	before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote , :downvote]
 	before_action :authenticate_user!, except: [:index, :show]
 	before_action :require_same_user, only: [:edit, :update, :destroy]
 	#Requires user except for pins listing and pins show action
@@ -53,7 +53,7 @@ class PinsController < ApplicationController
 	def downvote
 
     @pin = Pin.find(params[:id])
-    @pin.downvote_by current_user
+    @pin.downvote_by current_user, :vote_weight => 3
     
     redirect_to :back
   end

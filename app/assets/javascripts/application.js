@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require masonry/jquery.masonry
 //= require bootstrap-sprockets
-//= require_tree .
+//= require jquery.bind_with_delay
+//= require yt_player
+
 

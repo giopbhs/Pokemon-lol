@@ -31,4 +31,15 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index]
 
+  resources :videos, only: [:index, :new, :create]
+
+    resources :videos do
+    member do
+      put "like", to: "videos#upvote"
+      put "dislike", to: "videos#downvote"
+    end
+  end
+
+
+  
 end

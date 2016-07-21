@@ -1,0 +1,12 @@
+.background-transparent
+  #users.transitions-enabled
+    - @users.each do |user|
+      .box.panel.panel-default
+        %br/
+        = gravatar_for user, size: 150
+        %h3
+          %i.glyphicon.glyphicon-heart.hvr-pulse-grow
+          = link_to user.name, user, class: "hvr-grow line_none"
+          %i.glyphicon.glyphicon-heart.hvr-pulse-grow
+        .panel-body
+          = link_to "Click here to Visit", user, class: "btn btn-success btn-lg hvr-bounce-to-right", type: "btn'"
