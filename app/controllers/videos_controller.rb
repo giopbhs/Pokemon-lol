@@ -2,7 +2,7 @@ class VideosController < ApplicationController
 before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 before_action :authenticate_user!, except: [:index, :show]
 def index
-  @videos = Video.all.order(:cached_weighted_score => :desc)
+@videos = Video.order('created_at DESC')
 end
 
 	def new
