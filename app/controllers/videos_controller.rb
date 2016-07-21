@@ -5,15 +5,15 @@ def index
 end
 
 	def new
-  @video = Video.new
+  @video = current_user.videos.build
 end
 
 def create
-  @video = Video.new(params.require(:video).permit(:link))
+  @video = current_user.videos.build(params.require(:video).permit(:link))
   
   if @video.save
     flash[:success] = 'Video added!'
-    redirect_to root_url
+    redirect_to videos_path
   else
     render 'new'
   end

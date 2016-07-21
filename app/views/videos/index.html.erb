@@ -2,9 +2,9 @@
   <% if user_signed_in? %>
 <div class="jumbotron">
   <div class="container ">
-    <h1>Share your videos with the world!</h1>
-    <p>Click the button below to share your video from YouTube.</p>
-    <p>
+    <h1 class="text-center">Share the best Pokemon Videos with the world!</h1>
+    <p class="text-center">Click the button below to share your video from YouTube.</p>
+    <p class="text-center">
       <%= link_to 'Add video now!', new_video_path, class: 'btn btn-primary btn-lg' %>
     </p>
   </div>
@@ -30,9 +30,9 @@
                               class: 'yt_preview img-rounded', :"data-uid" => video.uid %>
 
                 <div class="caption">
-                  <h5><%= video.title %></h5>
-                  <p>Author: <b><%= video.author %></b></p>
-                  <p>Duration: <b><%= video.duration %></b></p>
+                 <!--  <h5><%= video.title %></h5> -->
+                  <p>Shared by: <br><%= video.user %></p> 
+                 <!--  <p>Duration: <br><%= video.duration %></p> -->
                   <p>
                     <%= link_to like_video_path(video), method: :put, class: "btn btn-default" do %>
                       <span class="glyphicon glyphicon-thumbs-up hvr-bob"></span>
