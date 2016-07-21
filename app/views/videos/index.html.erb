@@ -1,3 +1,4 @@
+<div class="container" id="videos-lol">
 <div class="jumbotron">
   <div class="container ">
     <h1>Share your videos with the world!</h1>
@@ -15,10 +16,11 @@
     <h1 class="text-center">Latest videos</h1>
     </div>
     <div id="player-wrapper"></div>
-<div class="transitions-enabled" id="pins">
+
     <% @videos.in_groups_of(3) do |group| %>
       <div class="row">
         <% group.each do |video| %>
+        <div class="transitions-enabled" id="pins">
           <% if video %>
             <div class=" box">
               <div class="yt_video thumbnail">
@@ -49,4 +51,5 @@
       </div>
     <% end %>
   </div>
-<% end %>s
+<% end %>
+</div>
