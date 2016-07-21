@@ -1,5 +1,6 @@
 class VideosController < ApplicationController
 before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+before_action :authenticate_user!, except: [:index, :show]
 def index
   @videos = Video.order('created_at DESC')
 end
@@ -42,5 +43,18 @@ def upvote
   end
 
 
+  private
+
+  def video_params
+    params.require(:video).permit(:link)
+  end
+
+
+  def require_same_user
+    if current_user != @video.user
+      flash[:danger] = "You can only Edit or Delete your own Post!"
+      redirect_to root_path
+    end
+  end
 
 end
