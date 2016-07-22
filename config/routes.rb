@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'pages/resources'
 
+  get 'pages/pokedex'
+
   resources :coments
   resources :comments
   resources :links do

@@ -153,6 +153,11 @@ textarea {
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
+
+    .pokedex-td td{
+    font-size:1px;
+    }
+
 	#pins .box {
     margin: 2px;
     width: 100%;
@@ -572,4 +577,10 @@ div::selection,a::selection,img::selection, small::selection, .btn::selection {
 
 .container #videos-lol footer{
 	display:none;
+}
+
+td, th {
+    padding: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+    border-top: 2px solid rgba(0, 0, 0, 0.01);
 }
