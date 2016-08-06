@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 
   def pokedex
   end
+
+  def nostalgia
+  	
+  end
 end
