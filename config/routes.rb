@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  resources :pins do
+  resources :pins,:path => 'pokememes' do
   	member do
   		put "like", to: "pins#upvote"
   		put "dislike", to: "pins#downvote"
